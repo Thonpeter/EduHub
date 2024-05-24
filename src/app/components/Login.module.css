@@ -1,0 +1,94 @@
+/* Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* FormContainer */
+  .FormContainer {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* FormTitle */
+  .FormTitle {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+    color: #0070f3;
+  }
+  
+  /* FormGroup */
+  .FormGroup {
+    margin-bottom: 20px;
+  }
+  
+  /* Label */
+  .Label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Input */
+  .Input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .Input:focus {
+    border-color: #0070f3;
+    box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+    outline: none;
+  }
+  
+  /* Button */
+  .Button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .Button:hover {
+    background-color: #0051c7;
+    transform: translateY(-2px);
+  }
+  
+  /* ForgotPasswordLink */
+  .ForgotPasswordLink {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #0070f3;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .ForgotPasswordLink:hover {
+    color: #0051c7;
+  }
+  

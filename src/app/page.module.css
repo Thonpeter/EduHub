@@ -1,316 +1,184 @@
+/* Container styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
   
+  /* Hero section styles */
   .hero {
     text-align: center;
     margin-bottom: 60px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0070f3, #0051c7);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   .title {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
   .description {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-  
-  .feature {
-    text-align: center;
-  }
-  
-  .featureTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .featureDescription {
-    font-size: 16px;
-    color: #666;
-  }
-  .ctaButton {
-    background-color: #0070f3;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .ctaButton:hover {
-    background-color: #0051c7;
-  }
-  
-  .testimonials {
-    margin-top: 60px;
-    text-align: center;
-  }
-  
-  .sectionTitle {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 20px;
+    color: #ddd;
     margin-bottom: 40px;
-  }
-  
-  .testimonial {
-    margin-bottom: 40px;
-  }
-  
-  .testimonialText {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .testimonialAuthor {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .cta {
-    background-color: #f5f5f5;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .ctaTitle {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .ctaDescription {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-  }
-  /* Existing styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .hero {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-  
-  .feature {
-    text-align: center;
-  }
-  
-  .featureTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .featureDescription {
-    font-size: 16px;
-    color: #666;
   }
   
   .ctaButton {
-    background-color: #0070f3;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .ctaButton:hover {
-    background-color: #0051c7;
-  }
-  
-  .testimonials {
-    margin-top: 60px;
-    text-align: center;
-  }
-  
-  .sectionTitle {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  
-  .testimonial {
-    margin-bottom: 40px;
-  }
-  
-  .testimonialText {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .testimonialAuthor {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .cta {
-    background-color: #f5f5f5;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .ctaTitle {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .ctaDescription {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-  }
-  
-  /* New styles */
-  .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal {
     background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .modalHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .modalHeader h3 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .closeButton {
-    background-color: transparent;
+    color: #0070f3;
     border: none;
-    font-size: 24px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
   }
   
-  .modalBody {
-    /* Styles for the form and input fields */
+  .ctaButton:hover {
+    background-color: #0051c7;
+    color: #fff;
   }
   
-  .formGroup {
+  /* Features section styles */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 20px;
+  }
+  
+  .feature {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 48px;
     margin-bottom: 20px;
   }
   
-  .formInput {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+  .featureTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
   
-  .submitButton {
+  .featureDescription {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Testimonials section styles */
+  .testimonials {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .testimonialCarousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .testimonial {
+    flex: 0 0 300px;
+    margin: 0 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .testimonialText {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .testimonialAuthor {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* CTA section styles */
+  .cta {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ctaTitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .ctaDescription {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .ctaButton {
     background-color: #0070f3;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
   }
   
-  .submitButton:hover {
+  .ctaButton:hover {
     background-color: #0051c7;
   }
   
-  .rotate {
-    animation: rotate 2s infinite linear;
-  }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .swiperPaginationBullet {
-    background-color: #ccc;
-    opacity: 1;
-  }
-  
-  .swiperPaginationBulletActive {
-    background-color: #0070f3;
-  }
-  
-  .swiperButtonPrev,
-  .swiperButtonNext {
-    color: #0070f3;
-  }
-  
-  .swiperNavigation {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  /* Responsive Styles */
+  /* Responsive styles */
   @media (max-width: 768px) {
     .features {
       grid-template-columns: 1fr;
@@ -323,4 +191,13 @@
     .testimonialAuthor {
       font-size: 14px;
     }
+  
+    .ctaTitle {
+      font-size: 28px;
+    }
+  
+    .ctaDescription {
+      font-size: 16px;
+    }
   }
+  

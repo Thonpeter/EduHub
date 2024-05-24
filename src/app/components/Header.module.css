@@ -1,7 +1,19 @@
+/* Header styles */
 .header {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .header.scrolled {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 40px;
   }
   
   .nav {
@@ -11,8 +23,14 @@
   }
   
   .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    color: #0070f3;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    color: #0051c7;
   }
   
   .navList {
@@ -34,28 +52,104 @@
     color: #333;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .navLink::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0070f3;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+  }
+  
+  .navLink:hover::after {
+    width: 100%;
   }
   
   .navLink:hover {
     color: #0070f3;
   }
+  
+  .button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   .formContainer {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-in-out;
   }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px 20px;
+    }
+  
+    .navList {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navItem {
+      margin: 10px 0;
+    }
+  
+    .navLink {
+      padding: 10px;
+      display: block;
+    }
+  
+    .header.scrolled .navList {
+      display: flex;
+    }
+  }
+  
